@@ -16,8 +16,15 @@ The information collected and presented includes:
 3. HTML
 
 ## **Screencaps:**
-![pic1.png](images/precipitation_scores.png)
+Script is run by clicking on "get data"
+![pic1](images/pic1.png)
 
-![temperature](images/temperature.png)
+Image taken from picture nasa's mars picture of the day
+![pic2](images/pic2.png)
 
-![trip_avg_temp](images/trip_avg_temp.png)
+Weather taken from daily twitter feed updates
+![pic3](images/pic3.png)
+
+![pic4](images/pic4.png)
+
+![pic5](images/pic5.png)
