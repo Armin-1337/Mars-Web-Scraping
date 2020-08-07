@@ -20,7 +20,7 @@ def home():
 @app.route("/scrape")
 def scrape():
 
-    mars_data = mars_notebook.scrape_info()
+    mars_data = mars_webscrape.scrape_info()
 
     mongo.db.mars.update({}, mars_data, upsert=True)
     return redirect("/")
