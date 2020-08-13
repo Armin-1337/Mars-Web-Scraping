@@ -13,15 +13,15 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
   <!--CSS stylesheet-->
-  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheets/styles.css') }}"/>
+  <link rel="stylesheet" href="static/css/styles.css">
   
 </head>
 
 <body>
   <div class="container-fluid">
     <div class="jumbotron text-center">
-      <h1>Mission to Mars</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+      <h1 class="description-title">Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Today's Data!</a></p>
     </div>
 
     <!--News-->
@@ -39,9 +39,8 @@
     <!--Featured Image-->
     <div class="row">
       <div class="col-md-8">
-	  <!--<p> {{mars}}</p>-->
         <h1 class="description-title">Featured Mars Image:</h1>
-          <img src="{{mars.featured_image_key}}" class="description-current">
+        <img src="{{mars.featured_image_key}}" class="description-current">
       </div>
 
       <div class="col-md-4">
@@ -74,21 +73,21 @@
     </div>
 
     <!--Hemispheres-->
-    <div class="container">
+    <div class="container" >
       <article class="description-content">
-        <div class="col-xs-12">
-          <h1 class="description-title">Mars Hemispheres</h1>
+        <!-- <div class="col-xs-12"> -->
+          <h1 class="description-title" style="text-align: center;">Mars Hemispheres</h1>
           <hr />
-        </div>
-        <div class="row">
-			<div class="col-sm-12">
-        {% for x in mars.hemispheres %}  
-				<h2 class="comparison-title">{{x.title}}</h2>
-				<img src="{{x.img_url}}" class="comparison-image img-responsive">
-				<hr />
-        {% endfor %}
-			</div>
-        </div>
+        <!-- </div> -->
+        <!-- <div class="container" > -->
+          <div class="col-md-auto">
+            {% for x in mars.hemispheres %}  
+            <h2 class="comparison-title">{{x.title}}</h2>
+            <img src="{{x.img_url}}" class="comparison-image img-responsive">
+            <hr />
+            {% endfor %}
+          </div>
+        <!-- </div> -->
       </article>
     </div>
 
